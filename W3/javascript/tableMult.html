@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        td {
+            border: 1px solid black;
+        }
+
+        tr:nth-child(2n) {
+            background: rgb(61, 51, 51);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h3>Multiplication Table</h3>
+    </div>
+    <script>
+        (function () {
+            let table = $('<table>');
+            let tbody = $('<tbody>');
+            table.append(tbody);
+            for (let i = 1; i < 10; i++) {
+                let row = $('<tr>');
+                for (let j = 1; j < 10; j++) {
+                    let td = $('<td>').html('' + i + '&middot;' + j + '=' + i * j);
+                    row.append(td);
+                }
+                table.append(row);
+            }
+            $('#container').append(table);
+        }());
+    </script>
+
+</body>
+
+</html>

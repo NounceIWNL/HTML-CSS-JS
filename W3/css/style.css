@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+}
+.main__form{
+    display: block;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.main__input{
+    width: 100px;
+    height: 30px;
+    margin-bottom: 30px;
+}
+.main_button{
+    padding: 10px 30px;
+    
+}
