@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+
+    <style>
+        img {
+            zoom: 200%;
+            opacity: 0.3;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .wrapper {
+            display: grid;
+            width: 850px;
+            grid-template-columns: 0.75fr 1.2fr 1.65fr;
+            grid-gap: 3px;
+            margin: 20px 10px;
+
+        }
+
+        .box {
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            color: 0;
+        }
+
+        .c {
+            grid-column: 3/4;
+            grid-row: 1/4;
+            padding: 40px 60px 40px 60px;
+        }
+
+        .h {
+            grid-column: 2/4;
+            grid-row: 4/5;
+            height: 120px;
+        }
+
+        .box input {
+            width: 80%;
+        }
+        textarea{
+            width: 80px;
+            height: 80px;
+            margin: 30px;
+        }
+        .c label{
+            margin: 30px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="/img/basic-form.png" class="form" alt="">
+    <form class="wrapper">
+        <div class="box a"> <label for="frame">First name:</label></div>
+        <div class="box b"><input type="text" id="frame" name"frame"></div>
+        <div class="box c">c</div>
+        <div class="box d">d</div>
+        <div class="box e">e</div>
+        <div class="box f">f</div>
+        <div class="box g">g</div>
+        <div class="box h">h</div>
+        <div class="box j">j</div>
+    </form>
+</body>
+
+</html>
