@@ -3,79 +3,126 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="css/normalize.css">
-
-
+    <title>Grtid
+    </title>
+    <link rel="stylesheet" href="../css/colors.css">
     <style>
-        img {
-            zoom: 200%;
-            opacity: 0.3;
-            position: absolute;
-            left: 0;
-            top: 0;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .wrapper {
-            display: grid;
-            width: 850px;
-            grid-template-columns: 0.75fr 1.2fr 1.65fr;
-            grid-gap: 3px;
-            margin: 20px 10px;
+        .container {
+            margin: 0 auto;
+            width: 1024px;
+            border: 1px solid black;
+        }
 
+        .image {
+
+            width: 800px;
+            position: absolute;
+            opacity: 0.2;
+            display: none;
+        }
+
+        .form {
+            margin: 0 auto;
+            padding: 10px;
+            width: 800px;
+            display: grid;
+            grid-template-columns: 0.65fr 1.2fr 1.6fr;
         }
 
         .box {
             min-height: 100px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-weight: 500;
-            color: 0;
+            font-size: 24px;
+            align-items: center;
+            font-weight: 700;
+            color: black;
         }
 
         .c {
             grid-column: 3/4;
             grid-row: 1/4;
-            padding: 40px 60px 40px 60px;
+
         }
 
         .h {
             grid-column: 2/4;
             grid-row: 4/5;
-            height: 120px;
+
         }
 
-        .box input {
-            width: 80%;
+        .h {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
         }
-        textarea{
-            width: 80px;
-            height: 80px;
-            margin: 30px;
+
+        .btn {
+            width: 150px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
         }
-        .c label{
-            margin: 30px 20px;
+
+        input {
+            width: 85%;
+            height: 50px;
+        }
+
+        .c {
+            display: block;
+            padding: 40px 60px;
+        }
+
+        .c label {
+            display: block;
+            padding-bottom: 20px;
         }
     </style>
 </head>
 
 <body>
-    <img src="/img/basic-form.png" class="form" alt="">
-    <form class="wrapper">
-        <div class="box a"> <label for="frame">First name:</label></div>
-        <div class="box b"><input type="text" id="frame" name"frame"></div>
-        <div class="box c">c</div>
-        <div class="box d">d</div>
-        <div class="box e">e</div>
-        <div class="box f">f</div>
-        <div class="box g">g</div>
-        <div class="box h">h</div>
-        <div class="box j">j</div>
-    </form>
+    <div class="container">
+        <img src="../css/basic-form.png" alt="basic" class="image">
+        <form action="#" class="form">
+            <div class="box a ">
+                <label for="fname">First name:</label>
+            </div>
+            <div class="box b">
+                <input type="text" class="fname" id="fname">
+            </div>
+            <div class="box c">
+                <label for="message">Department:</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </div>
+            <div class="box d">
+                <label for="lname">First name:</label>
+            </div>
+            <div class="box e">
+                <input type="text" class="fname" id="lname">
+            </div>
+            <div class="box f">
+                <label for="adress">First name:</label>
+            </div>
+            <div class="box h">
+                <button class="btn">Back</button>
+                <button class="btn">Cancel</button>
+                <button class="btn">Next</button>
+            </div>
+            <div class="box i">
+                <input type="text" class="fname" id="adress">
+            </div>
+
+        </form>
+    </div>
+
 </body>
 
 </html>
