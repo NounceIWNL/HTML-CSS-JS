@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/colors.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/two.js/0.8.14/two.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <div class="footer">
+        <a href="#" id="start">Start</a>
+    </div>
+    <script>
+        function init() {
+            let container = document.getElementById('container');
+
+            let a = 50;
+            let rect = [];
+            let countWidth = 6;
+            let countHeight = 4;
+            let lineTotal = countWidth * countHeight;
+            let width = countWidth * a;
+            let height = countHeight * a;
+            two = new Two({ width: 300, height: 200, fullscreen: false });
+            two.appendTo(container);
+            for (let i = 0; i < countWidth; i++) {
+                for (let j = 0; j < countHeight; j++) {
+                    rect[i + j * countWidth] = two.makeRectangle(i * a + a / 2, j * a + a / 2, a, a);
+                }
+            }
+            two.update();
+        }
+        init();
+
+        function make(){
+				var control = Math.floor(Math.random() * 4) + 2;
+				for(var i=0; i<lineTotal; i++){					
+					var rand = Math.floor(Math.random() * control) + 0;						
+					
+					
+					if(rand==control-1){	
+						rects[i].linewidth = 2;					
+						rects[i].fill = colors['Red']['500']['color'];	
+						rects[i].stroke = "rgba(255,255,255,1)";
+					}
+					else{
+						rects[i].linewidth = 2;					
+						rects[i].fill = colors['Blue']['500']['color'];	
+						rects[i].stroke = "rgba(255,255,255,1)";						
+					}									
+				}				
+				two.update();
+			}
+        make(); 
+    </script>
+</body>
+
+</html>
